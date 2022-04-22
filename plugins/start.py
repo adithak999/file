@@ -143,15 +143,4 @@ async def not_joined(client: Client, message: Message):
         disable_web_page_preview = True
     )
 
-@Bot.on_message(filters.command('broadcast') & filters.private & filters.user(ADMINS))
-async def broadcast(client: Bot, message: Message):
- if (message.reply_to_message):
-   msg = await message.reply_text("Geting All ids from database ...........")
-   ids = getid()
-   tot = len(ids)
-   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
-   for id in ids:
-     try:
-     	await message.reply_to_message.copy(id)
-     except:
-     	pass
+
