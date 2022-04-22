@@ -1,5 +1,4 @@
 import pymongo
-import motor.motor_asyncio
 from config import DB_URI
 
 
@@ -7,9 +6,7 @@ DB_NAME = os.environ.get("DB_NAME","cloud19")
 mongo = pymongo.MongoClient(DB_URI)
 db = mongo[DB_NAME]
 dbcol = db["user"]
-   
-class Database:
-
+  
 
     def insert(chat_id):
             user_id = int(chat_id)
