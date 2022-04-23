@@ -88,9 +88,9 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup( [[
             InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/Film_hous"),
-            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/Film_hous") 
+            InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/Film_housc") 
             ],[
-            InlineKeyboardButton("🔒 Close", callback_data = "close")
+            InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
             ]]
         )
         await message.reply_text(
