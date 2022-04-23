@@ -141,4 +141,28 @@ async def not_joined(client: Client, message: Message):
         disable_web_page_preview = True
     )
 
-
+@Bot.on_message(filters.command('about') & filters.private)
+async def about_message(client: Client, message: Message):
+    await message.reply_text(
+        text = f"""✯ 𝙼𝚈 𝙽𝙰𝙼𝙴 : <a href=https://t.me/ccfilestorebot>🔥𝙵𝙸𝙻𝙴 𝚂𝚃𝙾𝚁𝙴 𝙱𝙾𝚃🔥</a>
+                   ✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : <a href=https://t.me/adpsycho>𝙰𝙳𝙸𝚃𝙷</a>
+                   ✯ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁𝚂 : <a href=https://github.com/CodeXBotz>𝘾𝙤𝙙𝙚 𝕏 𝘽𝙤𝙩𝙯</a>
+                   ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
+                   ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
+                   ✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙾𝙺𝚃𝙴𝚃𝙾 𝙲𝙻𝙾𝚄𝙳""",                           
+        disable_web_page_preview = True,
+        reply_markup = InlineKeyboardMarkup(
+            [
+                [
+                     InlineKeyboardButton("🔒 Close", callback_data = "close")
+                ]
+            ]
+        )
+    )
+elif data == "close":
+    await query.message.delete()
+    try:
+        await query.message.reply_to_message.delete()
+    except:
+        pass    
+            
