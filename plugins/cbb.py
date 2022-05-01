@@ -10,12 +10,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"""✯ 𝙼𝚈 𝙽𝙰𝙼𝙴 : <a href=https://t.me/ccfilestorebot>𝚂𝙿𝙸𝙳𝙴𝚁𝙼𝙰𝙽</a>
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : <a href=https://t.me/adpsycho>𝙰𝙳𝙸𝚃𝙷</a>
-✯ 𝙳𝙴𝚅 : <a href=https://t.me/mr_MKN>𝐌𝐫.𝐌𝐊𝐍 𝐓𝐆</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙾𝙺𝚃𝙴𝚃𝙾 𝙲𝙻𝙾𝚄𝙳""",                           
+            text = f"""● ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/ccfilestorebot>sᴘɪᴅᴇʀᴍᴀɴ</a>
+● ᴄʀᴇᴀᴛᴏʀ : <a href=https://t.me/adpsycho>ᴀᴅɪᴛʜ</a>
+● ᴅᴇᴠ : <a href=https://t.me/mr_MKN>ᴍʀ.ᴍᴋɴ ᴛɢ</a>
+● 𝙻𝙸𝙱𝚁𝙰𝚁ʏ: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
+● 𝙻𝙰𝙽𝙶𝚄𝙰𝙶ᴇ: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
+● 𝙱𝙾ᴛ 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙾𝙺𝚃𝙴𝚃𝙾 𝙲𝙻𝙾𝚄𝙳""",                           
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
