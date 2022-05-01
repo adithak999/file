@@ -21,3 +21,10 @@ def getid():
          id = key["_id"]
          values.append((id)) 
     return values
+
+async def add_user(self, id, name):
+        user = self.new_user(id, name)
+        await self.col.insert_one(user)
+
+async def get_all_users(self):
+        return self.col.find({})
