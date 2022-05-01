@@ -1,4 +1,5 @@
-import pymongo 
+import motor.motor_asyncio
+import pymongo
 import os
 
 DB_NAME = os.environ.get("DB_NAME","")
@@ -26,5 +27,6 @@ async def add_user(self, id, name):
         user = self.new_user(id, name)
         await self.col.insert_one(user)
 
-async def get_all_users(self):
-        return self.col.find({})
+async def total_users_count(self):
+        count = await self.col.count_documents({})
+        return count
