@@ -8,7 +8,7 @@ from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
 from helper_func import subscribed, encode, decode, get_messages
-from database import getid, insert, add_user, total_users_count
+from database import getid, insert, total_users_count
 
 #=====================================================================================##
 
@@ -21,7 +21,6 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
-    await db.add_user(message.from_user.id, message.from_user.first_name)
     id = message.from_user.id
     user_name = '@' + message.from_user.username if message.from_user.username else None
     try:
@@ -110,7 +109,6 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    await db.add_user(message.from_user.id, message.from_user.first_name)
     insert(int(message.chat.id))
     buttons = [
         [
