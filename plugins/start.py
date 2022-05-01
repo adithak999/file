@@ -157,9 +157,9 @@ async def broadcast(client: Bot, message: Message):
 
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_usesr(client: Bot, message: Message):
-    rju = await message.reply('<b>𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝚄𝚂𝙴𝚁𝙰 𝙲𝙾𝚄𝙽𝚃...</b>')
+    msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     total_users = await total_users_count()
-    await rju.edit(f"Total uses = {total_users}")
+    await msg.edit(f"Total uses = {total_users}")
 
 @Bot.on_message(filters.command('about') & filters.private)
 async def about_message(client: Client, message: Message):
