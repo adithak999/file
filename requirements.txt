@@ -2,4 +2,8 @@
 pyrogram~=1.4.1
 TgCrypto
 Pyromod
-
+pymongo
+Pillow
+humanize
+hachoir
+dnspython
