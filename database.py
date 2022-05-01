@@ -8,6 +8,12 @@ mongo = pymongo.MongoClient(DB_URL)
 db = mongo[DB_NAME]
 dbcol = db["user"]
 
+def __init__(self, uri, database_name):
+        self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)
+        self.db = self._client[database_name]
+        self.col = self.db.users
+        self.grp = self.db.groups
+
 def insert(chat_id):
             user_id = int(chat_id)
             user_det = {"_id":user_id,"file_id":None}
