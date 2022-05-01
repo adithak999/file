@@ -8,7 +8,7 @@ from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
 from helper_func import subscribed, encode, decode, get_messages
-from database import getid, insert, total_users_count
+from database import getid, insert
 
 #=====================================================================================##
 
@@ -158,8 +158,8 @@ async def broadcast(client: Bot, message: Message):
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
-    total_users = await total_users_count()
-    await msg.edit(f"Total uses = {total_users}")
+    tot = len(ids)
+    await msg.edit(f"Total uses = {tot}")
 
 @Bot.on_message(filters.command('about') & filters.private)
 async def about_message(client: Client, message: Message):
