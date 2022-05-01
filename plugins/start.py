@@ -158,7 +158,7 @@ async def broadcast(client: Bot, message: Message):
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_usesr(client: Bot, message: Message):
     rju = await message.reply('<b>𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝚄𝚂𝙴𝚁𝙰 𝙲𝙾𝚄𝙽𝚃...</b>')
-    total_users = await db.total_users_count()
+    total_users = await total_users_count()
     await rju.edit(f"Total uses = {total_users}")
 
 @Bot.on_message(filters.command('about') & filters.private)
