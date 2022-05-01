@@ -8,7 +8,7 @@ from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
 from helper_func import subscribed, encode, decode, get_messages
-
+from helper.database import getid
 
 #=====================================================================================##
 
@@ -24,7 +24,7 @@ async def start_command(client: Client, message: Message):
     id = message.from_user.id
     user_name = '@' + message.from_user.username if message.from_user.username else None
     try:
-        await add_user(id, user_name)
+        insert(int(message.chat.id))
     except:
         pass
     text = message.text
@@ -109,6 +109,7 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
+    insert(int(message.chat.id))
     buttons = [
         [
             InlineKeyboardButton(
@@ -140,6 +141,20 @@ async def not_joined(client: Client, message: Message):
         quote = True,
         disable_web_page_preview = True
     )
+
+@Bot.on_message(filters.command('broadcast') & filters.private & filters.user(ADMINS))
+async def broadcast(client: Bot, message: Message):
+ if (message.reply_to_message):
+   ms = await message.reply_text("Geting All ids from database ...........")
+   ids = getid()
+   tot = len(ids)
+   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
+   for id in ids:
+     try:
+     	await message.reply_to_message.copy(id)
+     except:
+     	pass
+
 
 @Bot.on_message(filters.command('about') & filters.private)
 async def about_message(client: Client, message: Message):
