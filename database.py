@@ -15,13 +15,6 @@ def insert(chat_id):
             except:
             	pass
 
-def find(chat_id):
-	id =  {"_id":chat_id}
-	x = dbcol.find(id)
-	for i in x:
-             lgcd = i["file_id"]
-             return lgcd 
-
 def getid():
     values = []
     for key  in dbcol.find():
