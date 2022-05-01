@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"""✯ 𝙼𝚈 𝙽𝙰𝙼𝙴 : Fiel store bot
+            text = f"""✯ 𝙼𝚈 𝙽𝙰𝙼𝙴 : <a href=https://t.me/ccfilestorebot>𝚂𝙿𝙸𝙳𝙴𝚁𝙼𝙰𝙽</a>
 ✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : <a href=https://t.me/adpsycho>𝙰𝙳𝙸𝚃𝙷</a>
 ✯ 𝙳𝙴𝚅 : <a href=https://t.me/mr_MKN>𝐌𝐫.𝐌𝐊𝐍 𝐓𝐆</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
