@@ -1,7 +1,6 @@
 # --- For-Bot-Working --------- #
 pyrogram~=1.4.1
 pymongo[srv]==3.11.4
-motor==2.4.0
 TgCrypto
 Pyromod
 Pillow
