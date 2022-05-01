@@ -2,8 +2,8 @@ from pyrogram import Client ,filters
 from database import getid
 from config import ADMINS
 
-@Client.on_message(filters.private & filters.user(ADMINS) & filters.command(["broadcast"]))
-async def broadcast(bot, message):
+@Bot.on_message(filters.command('broadcast') & filters.private & filters.user(ADMINS))
+async def broadcast(client: Bot, message: Message):
  if (message.reply_to_message):
    ms = await message.reply_text("Geting All ids from database ...........")
    ids = getid()
