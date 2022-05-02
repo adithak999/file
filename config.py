@@ -21,7 +21,7 @@ DB_URL = os.environ.get("DATABASE_URL", "mongodb+srv://UI:UI@cluster0.zggdk.mong
 OWNER_ID = int(os.environ.get("OWNER_ID", "1067513987"))
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001678056679"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
