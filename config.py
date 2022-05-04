@@ -44,7 +44,7 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b><i>{filename}\n\n=========
 PROTECT_CONTENT = os.environ.get('PROTECT_CONTENT', "False") 
 
 #Set true if you want Disable your Channel Posts Share button
-if os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True':
+if os.environ.get("DISABLE_CHANNEL_BUTTON", "True") == 'True':
     DISABLE_CHANNEL_BUTTON = True
 else:
     DISABLE_CHANNEL_BUTTON = False
