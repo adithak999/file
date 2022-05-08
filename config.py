@@ -38,7 +38,7 @@ except ValueError:
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>⚠️ ᴘʟᴇᴀsᴇ ғᴏʟʟᴏᴡ ᴛʜɪs ʀᴜʟᴇs ⚠️\n\nആദ്യം ᴊᴏɪɴ ɢʀᴏᴜᴘ എന്ന ബട്ടൺ ക്ലിക്ക് ചെയ്തു ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്.. എന്നിട്ട് വീണ്ടു ബോട്ടിൽ വന്നിട്ട് ᴍᴇ ᴊᴏɪɴᴇᴅ എന്ന ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ ഫയൽ കിട്ടുന്നതായിരിക്കും\n\nFɪʀsᴛ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ᴊᴏɪɴ ɢʀᴏᴜᴘ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ᴊᴏɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ. ᴛʜᴇɴ ᴄᴏᴍᴇ ʙᴀᴄᴋ ᴛᴏ ᴛʜᴇ ʙᴏᴛ ᴄʟɪᴄᴋ ᴏɴ ᴍᴇ ᴊᴏɪɴᴇᴅ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇ...</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b><i>{filename}\n\n=========== • ✠ • ===========\n▫️ ɢʀᴏᴜᴘ : @film_housc\n▫️ ᴄʜᴀɴɴᴇʟ : @film_hous =========== • ✠ • ===========</i></b>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b><i>{previouscaption}\n\n=========== • ✠ • ===========\n▫️ ɢʀᴏᴜᴘ : @film_housc\n▫️ ᴄʜᴀɴɴᴇʟ : @film_hous =========== • ✠ • ===========</i></b>")
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = os.environ.get('PROTECT_CONTENT', "False") 
