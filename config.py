@@ -12,7 +12,7 @@ APP_ID = int(os.environ.get("APP_ID", "12858393"))
 API_HASH = os.environ.get("API_HASH", "a295383aca802e9a3cd01df1fefe2310")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001785260530"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001419930818"))
 
 #Database 
 DB_URL = os.environ.get("DATABASE_URL", "mongodb://mongo:jYG8ggdw4TAfhSkCdWbV@containers-us-west-71.railway.app:6990")
@@ -21,7 +21,7 @@ DB_URL = os.environ.get("DATABASE_URL", "mongodb://mongo:jYG8ggdw4TAfhSkCdWbV@co
 OWNER_ID = int(os.environ.get("OWNER_ID", "1067513987"))
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001678056679"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001419930818"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
